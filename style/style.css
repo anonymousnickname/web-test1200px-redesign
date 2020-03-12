@@ -112,11 +112,11 @@ h1,h2,h3,h4,h5,h6 {
       width: 100%;
   }
 
-  .about__item:hover .about__img img{
+  .about__item:hover .about__img img, .about__itme:active .about__img img{
     opacity: 0.2;
   }
 
-  .about__item:hover .about__content{
+  .about__item:hover .about__content, .about__item:active .about__content{
     opacity: 1;
   }
 
