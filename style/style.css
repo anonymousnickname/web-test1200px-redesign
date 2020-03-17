@@ -70,12 +70,16 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .header__description {
-      text-shadow: 1px 1px 1px #000;
+      text-shadow: 1px 1px 3px #000;
   }
 
 @media screen and (max-width: 768px) {
   .header {
       font-size: 14px;
+  }
+
+   .header__description {
+    text-shadow: none;
   }
 }
 
@@ -100,8 +104,8 @@ h1,h2,h3,h4,h5,h6 {
   }
 
   .about__item {
-    position: relative;
-    z-index: 1000;
+      position: relative;
+      z-index: 1000;
       max-width: 700px;
       position: relative;
       margin-bottom: 40px;
@@ -161,6 +165,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .about__content-description {
     margin-bottom: 2em;
+    padding: 10px;
 }
 
 .about__content-link {
@@ -181,8 +186,12 @@ h1,h2,h3,h4,h5,h6 {
 
 @media screen and (max-width: 665px) {
     .about__content {
-        font-size: 13px;
+        font-size: 15px;
     }
+
+    .about__content-description {
+      font-size: 1.2em;
+  }
 }
 
 @media screen and (max-width: 515px) {
