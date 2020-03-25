@@ -100,21 +100,32 @@ h1,h2,h3,h4,h5,h6 {
   .about__wrapper {
     margin-top: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    padding: 0.5rem;
   }
 
   .about__item {
       position: relative;
       z-index: 1000;
-      max-width: 700px;
+      max-width: 360px;
       position: relative;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       border: 2px solid;
       border-radius: 5px;
       box-shadow: 1px 1px 5px #000;
   }
 
+  
+  @media screen and (max-width: 880px) {
+    .about__wrapper {
+      justify-content: flex-end;
+    }
+
+    .about__item {
+      max-width: 100%;
+    }
+  }
   .about__img img {
       width: 100%;
   }
@@ -138,7 +149,7 @@ h1,h2,h3,h4,h5,h6 {
 }
   .about__content {
     width: 100%;
-    font-size: 18px;
+    font-size: 13px;
     color: #fff;
     font-weight: bold;
     text-align: center;
@@ -152,31 +163,33 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .about__content-name {
-    text-shadow: 2px 2px 3px  #fff;
     text-transform: uppercase;
-    margin-bottom: 3em;
 }
 
 .about__content-title {
     text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 1em;
     text-shadow: 2px 2px 8px  #000;
-    margin-bottom: 2em;
 }
 
 .about__content-description {
-    margin-bottom: 2em;
-    padding: 10px;
+    padding: 5px;
+}
+
+.about__content-description.visual-branding {
+  font-size: 13px;
 }
 
 .about__content-link {
+    display: block;
     text-decoration: none;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid;
     border-radius: 5px;
-    margin-bottom: 0.9em;
     transition: all .2s linear;
+    margin: 5px auto 0;
+    width: 20%;
 }
 
 .about__content-link:hover {
@@ -193,24 +206,16 @@ h1,h2,h3,h4,h5,h6 {
     .about__content-description {
       font-size: 1.2em;
   }
+
+  .about__content-description.visual-branding {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 515px) {
 
     .about__content {
-        font-size: 10px;
-    }
-
-    .about__content-name {
-        margin-bottom: 1em;
-    }
-    
-    .about__content-title {
-        margin-bottom: 1em;
-    }
-    
-    .about__content-description {
-        margin-bottom: 2.5em;
+        font-size: 9px;
     }
 }
 
